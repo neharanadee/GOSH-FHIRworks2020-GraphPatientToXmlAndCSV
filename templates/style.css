@@ -1,0 +1,11 @@
+.container {
+	display: flex; /* or inline-flex */
+	flex-direction:row;
+	justify-content:space-around; 
+  }
+
+.item {
+	order: 1; /* default is 0 */
+	width: 200px; 
+	height: 500px; 
+}

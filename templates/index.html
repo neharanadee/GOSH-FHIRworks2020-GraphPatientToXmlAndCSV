@@ -1,0 +1,63 @@
+<head>
+  <style>
+  .container {
+    display: flex; /* or inline-flex */
+    flex-direction:row;
+    justify-content:space-around; 
+    }
+  
+  .item {
+    order: 1; /* default is 0 */
+    height: 500px; 
+    width:200px; 
+  }
+  .smallitem{
+    order: 1; 
+  }
+  </style>
+</head>
+<h1 align = "center">FHIR GRAPHS AND CSV/XML</h1>
+<div class = "container" align = "center">
+  <div class = "item"> 
+    <div class = "row" style = "font-size:30px;">General Graphs</div>
+    <br>
+    <div>
+      <form action="/api/graph/age_groups" method = "get">
+        <button type="submit">Age Agoups</button>
+     </form>
+     <br>
+     <form action="/api/graph/languages_spoken" method = "get">
+      <button type="submit">Languages Spoken</button>
+   </form>
+      <br>
+    <form action="/api/graph/marital_status" method = "get">
+        <button type="submit">marital status</button>
+    </form>
+    </div>
+  </div>
+
+  <div class = "item"> 
+    <div class = "row" style = "font-size:30px;"> XML</div>
+    <br>
+    <form action="/api/xml/observations/" method = "get">
+      <label for="fname"> 1. Get all observations for a patient</label><br>
+      <input type="text"  name = "patientID" placeholder="PatientID"><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form action="/api/xml/properties/" method = "get">
+      <label for="fname"> 2. Get all properties for a patient</label><br>
+      <input type="text"  name = "patientID" placeholder="PatientID"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class = "item">
+    <div class = "row" style = "font-size:30px;"> CSV</div>
+    <form action="/api/csv/properties" method = "get">
+      <label for="fname"> Get all properties for a patient</label><br>
+      <input type="text"  name = "patientID" placeholder="PatientID"><br>
+      <input type="submit" value="Submit">
+    </form>
+    </div>
+</div>
