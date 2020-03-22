@@ -5,14 +5,22 @@ GraphPatientToXmlAndCSV is an API that takes FHIR Records and converts them to X
 ## Installation
 1. Clone the project into a folder. 
 2. Ensure you have python and pip downloaded  (https://www.python.org/downloads/)
-3. Enssure you haev FHIR works api and use [github](https://github.com/greenfrogs/FHIRworks_2020) to install FHIRworks api
-3. Use the package manager [pip](https://pypi.org/project/matplotlib/) to install matplotlib.
-4. Use the package manager [pip](https://pypi.org/project/Flask/) to install flask.
-5. Use the package manager [pip](https://pypi.org/project/FHIR-Parser/) to install Fhir-parser.
-6. Use the package manager [pip](https://pypi.org/project/requests/) to install requests.
-
+3. Enssure you have FHIRWorks API or use (https://github.com/greenfrogs/FHIRworks_2020) to install FHIRworks api
+3. Use pip to install matplotlib 3.2.1
 ```bash
-pip install foobar
+pip install matplotlib
+```
+4. Use the package manager pip to install flask 1.1.1.
+```bash
+pip install flask
+```
+5. Use the package manager pip to install Fhir-parser 0.1.5.
+```bash
+pip install FHIR-Parser
+```
+6. Use the package manager pip to install requests 2.23.0. 
+```bash
+pip install requests
 ```
 
 ## Usage
