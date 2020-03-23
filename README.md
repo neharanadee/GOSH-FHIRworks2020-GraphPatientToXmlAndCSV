@@ -40,7 +40,8 @@ Three possible Get Requests; xml, graph, csv.
 
 #### Request 
 This gets all the observations of a patient with a given patient ID in a XML format. 
-For example, patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is given below
+For example,for patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is
+
 `GET /api/xml/observations/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
 #### Response 
@@ -99,7 +100,7 @@ Header:
 ```
 #### Request 
 This gets all the properties of a patient with a given patient ID in a XML format. 
-For example, patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is given below
+For example, for patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is 
 
 `GET /api/xml/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
@@ -175,6 +176,7 @@ Header:
 
 #### Request 
 This creates a graph based on patient age groups of all patients, according to patient properties data. 
+
 `GET /api/graph/age_groups?`
 
 #### Response 
@@ -191,6 +193,7 @@ Body:
 
 #### Request 
 This creates a graph based on marital status of all patients, according to patient properties data. 
+
 `GET /api/graph/marital_status?`
 
 #### Response 
@@ -207,6 +210,7 @@ Body:
 
 #### Request 
 This creates a graph based on languages spoken by all patients, according to patient properties data. 
+
 `GET /api/graph/languages_spoken?`
 
 #### Response 
@@ -226,7 +230,7 @@ Body:
 
 #### Request 
 This gets all the properties of a patient with a given patient ID in a CSV format. 
-For example, patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is given below
+For example, for patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is 
 
 `GET /api/csv/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
