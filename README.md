@@ -35,29 +35,83 @@ Three possible Get Requests.
 ### Graphs 
 
 #### Request 
-`GET http:localhost:8000/api/graphs/age_groups?`
+`GET /api/graph/age_groups?`
 
 #### Response 
 
 Header: 
-    HTTP/1.1 200 OK
-    Date: Mon, 23 Mar 2020 17:23:26 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: image/png
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 17:23:26 GMT,
+    Status: 200 OK,
+    Content-Type: image/png,
     Content-Length: 13053
 
 Body: 
 ![picture](/plot431.png)
 
+#### Request 
+`GET /api/graph/marital_status?`
 
-```python
-import foobar
+#### Response 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 05:39:46 GMT,
+    Status: 200 OK,
+    Content-Type: image/png,
+    Content-Length: 10676
+
+Body: 
+![picture](/plot561.png)
+
+#### Request 
+`GET /api/graph/languages_spoken?`
+
+#### Response 
+
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 05:44:20 GMT
+    Status: 200 OK,
+    Content-Type: image/png,
+    Content-Length: 17696
+    
+Body: 
+![picture](/plot572.png)
+
+### XML
+
+#### Request 
+`GET /api/xml/observations/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
+
+#### Response 
+
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 05:53:05 GMT
+    Status: 200 OK,
+    Content-Type: text/xml,
+    Content-Length: 64077
+
+Body: 
+![xml](/906.xml)
+
+#### Request 
+`GET /api/xml/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
+
+#### Response 
+
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 05:57:16 GMT
+    Status: 200 OK,
+    Content-Type: text/xml,
+    Content-Length: 2840
+
+Body: 
+![xml](/847.xml)
+
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

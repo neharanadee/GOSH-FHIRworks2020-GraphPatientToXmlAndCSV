@@ -121,4 +121,5 @@ def convertToXML(uid):
     return randomNumber
     #tree.write("output.xml")
 
-#convertObservationToXML('d9eb4cf6-2894-4627-b912-bbdca07b0401')
+# convertObservationToXML('d9eb4cf6-2894-4627-b912-bbdca07b0401')
+# convertToXML('d9eb4cf6-2894-4627-b912-bbdca07b0401')
