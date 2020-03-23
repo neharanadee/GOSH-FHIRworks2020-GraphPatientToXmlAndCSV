@@ -95,7 +95,6 @@ def graph_by_age_groups():
     # fig.savefig('plot.png')
     #plt.show()
 
-
     #something
 def graph_by_states(): 
     fhir = FHIR()
