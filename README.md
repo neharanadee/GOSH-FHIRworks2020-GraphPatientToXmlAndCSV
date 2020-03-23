@@ -30,54 +30,7 @@ python app.py
 ```
 
 ## Usage
-Three possible Get Requests. 
-
-### Graphs 
-
-#### Request 
-`GET /api/graph/age_groups?`
-
-#### Response 
-
-Header: 
-    HTTP/1.1 200 OK,
-    Date: Mon, 23 Mar 2020 17:23:26 GMT,
-    Status: 200 OK,
-    Content-Type: image/png,
-    Content-Length: 13053
-
-Body: 
-![picture](/plot431.png)
-
-#### Request 
-`GET /api/graph/marital_status?`
-
-#### Response 
-
-Header: 
-    HTTP/1.1 200 OK,
-    Date: Mon, 23 Mar 2020 05:39:46 GMT,
-    Status: 200 OK,
-    Content-Type: image/png,
-    Content-Length: 10676
-
-Body: 
-![picture](/plot561.png)
-
-#### Request 
-`GET /api/graph/languages_spoken?`
-
-#### Response 
-
-Header: 
-    HTTP/1.1 200 OK,
-    Date: Mon, 23 Mar 2020 05:44:20 GMT
-    Status: 200 OK,
-    Content-Type: image/png,
-    Content-Length: 17696
-    
-Body: 
-![picture](/plot572.png)
+Three possible Get Requests; xml, graph, csv. 
 
 ### XML
 
@@ -117,6 +70,7 @@ Header:
                 <Value6>http://loinc.org</Value6>
             </Component11>
         </Observation1>
+        <?other observations from 1 to 75.................... ?>
         <Observation75>
             <effective_datetime>11/10/2019</effective_datetime>
             <encounter_uuid>b216caef-e88b-4837-abf8-904f7c02ef0a</encounter_uuid>
@@ -207,10 +161,73 @@ Header:
     </properties>
 </patient>
 
-
 ```
+### Graphs 
+
+#### Request 
+`GET /api/graph/age_groups?`
+
+#### Response 
+
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 17:23:26 GMT,
+    Status: 200 OK,
+    Content-Type: image/png,
+    Content-Length: 13053
+
+Body: 
+![picture](/plot431.png)
+
+#### Request 
+`GET /api/graph/marital_status?`
+
+#### Response 
+
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 05:39:46 GMT,
+    Status: 200 OK,
+    Content-Type: image/png,
+    Content-Length: 10676
+
+Body: 
+![picture](/plot561.png)
+
+#### Request 
+`GET /api/graph/languages_spoken?`
+
+#### Response 
+
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 05:44:20 GMT
+    Status: 200 OK,
+    Content-Type: image/png,
+    Content-Length: 17696
+    
+Body: 
+![picture](/plot572.png)
 
 
+### CSV 
+
+#### Request 
+`GET /api/csv/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
+
+#### Response    
+Header: 
+    HTTP/1.1 200 OK,
+    Date: Mon, 23 Mar 2020 06:18:00 GMT
+    Status: 200 OK,
+    Content-Type: text/xml,
+    Content-Length: 1210
+    Content-Disposition:attachment; filename=result.csv
+
+```csv
+city,country,full_address,latitude,lines,longitude,postal_code,state,birth_date,codes,communication,languages,extensions0,extensions1,extensions2,extensions3,extensions4,extensions5,extensions6,gender,identifiers0,identifiers1,identifiers2,identifiers3,identifiers4,marital_status,multiple_birth,family,full_name,given,given_list,prefix,prefix_list,number,system,use,uuid,Blackstone,US,"358 Oberbrunner Approach Apt 4 Blackstone, Massachusetts
+, US",42.05283200979602,['358 Oberbrunner Approach Apt 4'],-71.52523247435127,,Massachusetts,10/21/1973,['en-US'],"[('en-US', 'English')]",['English'],us-core-race: White,us-core-ethnicity: Not Hispanic or Latino,patient-mothersMaidenName: Jeremy766 Gleichner915,us-core-birthsex: M,"patient-birthPlace: Sharon, Massachusetts, US",disability-adjusted-life-years: 0.016479540110564225,quality-adjusted-life-years: 45.983520459889434,male, d9eb4cf6-2894-4627-b912-bbdca07b0401,Medical Record Number d9eb4cf6-2894-4627-b912-bbdca07b0401,Social Security Number 999-67-4686,Driver's License S99910651,Passport Number X34975298X,M,False,Weissnat378,Mr. Abram53 Weissnat378,Abram53,['Abram53'],Mr.,['Mr.'],555-560-7469,phone,home,d9eb4cf6-2894-4627-b912-bbdca07b0401
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
