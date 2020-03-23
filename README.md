@@ -24,7 +24,11 @@ pip install requests
 ```
 
 ## Run the app 
-Run the app.py file
+1. Run the FHIRWorks API in one terminal
+```bash
+dotnet run
+```
+2. Run the app.py in another terminal simultaneously 
 ```bash
 python app.py
 ```
@@ -35,6 +39,8 @@ Three possible Get Requests; xml, graph, csv.
 ### XML
 
 #### Request 
+This gets all the observations of a patient with a given patient ID in a XML format. 
+For example, patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is given below
 `GET /api/xml/observations/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
 #### Response 
@@ -92,6 +98,9 @@ Header:
 </patient>
 ```
 #### Request 
+This gets all the properties of a patient with a given patient ID in a XML format. 
+For example, patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is given below
+
 `GET /api/xml/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
 #### Response 
@@ -165,6 +174,7 @@ Header:
 ### Graphs 
 
 #### Request 
+This creates a graph based on patient age groups of all patients, according to patient properties data. 
 `GET /api/graph/age_groups?`
 
 #### Response 
@@ -180,6 +190,7 @@ Body:
 ![picture](/plot431.png)
 
 #### Request 
+This creates a graph based on marital status of all patients, according to patient properties data. 
 `GET /api/graph/marital_status?`
 
 #### Response 
@@ -195,6 +206,7 @@ Body:
 ![picture](/plot561.png)
 
 #### Request 
+This creates a graph based on languages spoken by all patients, according to patient properties data. 
 `GET /api/graph/languages_spoken?`
 
 #### Response 
@@ -213,6 +225,9 @@ Body:
 ### CSV 
 
 #### Request 
+This gets all the properties of a patient with a given patient ID in a CSV format. 
+For example, patient ID 'd9eb4cf6-2894-4627-b912-bbdca07b0401', the get request is given below
+
 `GET /api/csv/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
 #### Response    
@@ -232,7 +247,4 @@ city,country,full_address,latitude,lines,longitude,postal_code,state,birth_date,
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
