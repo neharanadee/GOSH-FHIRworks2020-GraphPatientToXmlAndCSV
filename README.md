@@ -93,9 +93,50 @@ Header:
     Content-Type: text/xml,
     Content-Length: 64077
 
-Body: 
-![xml](/906.xml)
 
+```xml 
+
+<?xml version="1.0" ?>
+<patient>
+    <observation>
+        This contains observations for patient number d9eb4cf6-2894-4627-b912-bbdca07b0401
+        <Observation1>
+            <effective_datetime>01/09/2011</effective_datetime>
+            <encounter_uuid>5591633b-1e91-4029-818a-366631ccb952</encounter_uuid>
+            <issued_datetime>01/09/2011</issued_datetime>
+            <patient_uuid>d9eb4cf6-2894-4627-b912-bbdca07b0401</patient_uuid>
+            <status>final</status>
+            <type>vital-signs</type>
+            <uuid>541b3ad4-b3f1-4750-87d4-ef38b370ef0d</uuid>
+            <Component11>
+                <Value1>Body Mass Index</Value1>
+                <Value2>29.67</Value2>
+                <Value3>kg/m2</Value3>
+                <Value4>29.67kg/m2</Value4>
+                <Value5>39156-5</Value5>
+                <Value6>http://loinc.org</Value6>
+            </Component11>
+        </Observation1>
+        <Observation75>
+            <effective_datetime>11/10/2019</effective_datetime>
+            <encounter_uuid>b216caef-e88b-4837-abf8-904f7c02ef0a</encounter_uuid>
+            <issued_datetime>11/10/2019</issued_datetime>
+            <patient_uuid>d9eb4cf6-2894-4627-b912-bbdca07b0401</patient_uuid>
+            <status>final</status>
+            <type>survey</type>
+            <uuid>7b4b3677-b24a-4df3-a5fc-860ccd92055b</uuid>
+            <Component751>
+                <Value1>Tobacco smoking status NHIS</Value1>
+                <Value2>None</Value2>
+                <Value3/>
+                <Value4>N/A</Value4>
+                <Value5>72166-2</Value5>
+                <Value6>http://loinc.org</Value6>
+            </Component751>
+        </Observation75>
+    </observation>
+</patient>
+```
 #### Request 
 `GET /api/xml/properties/?patientID=d9eb4cf6-2894-4627-b912-bbdca07b0401`
 
@@ -108,8 +149,66 @@ Header:
     Content-Type: text/xml,
     Content-Length: 2840
 
-Body: 
-![xml](/847.xml)
+```xml
+<?xml version="1.0" ?>
+<patient>
+    <properties>
+        <addresses>
+            <city name="0">Blackstone</city>
+            <country name="0">US</country>
+            <full_address name="0">358 Oberbrunner Approach Apt 4Blackstone, Massachusetts, US</full_address>
+            <latitude name="0">42.05283200979602</latitude>
+            <lines name="0">['358 Oberbrunner Approach Apt 4']</lines>
+            <longitude name="0">-71.52523247435127</longitude>
+            <postal_code name="0"/>
+            <state name="0">Massachusetts</state>
+        </addresses>
+        <birth_date>10/21/1973</birth_date>
+        <communications>
+            <codes>['en-US']</codes>
+            <communication>[('en-US', 'English')]</communication>
+            <languages>['English']</languages>
+        </communications>
+        <extensions>
+            <extensions name="Identifier: 1">us-core-race: White</extensions>
+            <extensions name="Identifier: 2">us-core-ethnicity: Not Hispanic or Latino</extensions>
+            <extensions name="Identifier: 3">patient-mothersMaidenName: Jeremy766 Gleichner915</extensions>
+            <extensions name="Identifier: 4">us-core-birthsex: M</extensions>
+            <extensions name="Identifier: 5">patient-birthPlace: Sharon, Massachusetts, US</extensions>
+            <extensions name="Identifier: 6">disability-adjusted-life-years: 0.016479540110564225</extensions>
+            <extensions name="Identifier: 7">quality-adjusted-life-years: 45.983520459889434</extensions>
+        </extensions>
+        <gender>male</gender>
+        <identifiers>
+            <identifiers name="Identifier: 1"> d9eb4cf6-2894-4627-b912-bbdca07b0401</identifiers>
+            <identifiers name="Identifier: 2">Medical Record Number d9eb4cf6-2894-4627-b912-bbdca07b0401</identifiers>
+            <identifiers name="Identifier: 3">Social Security Number 999-67-4686</identifiers>
+            <identifiers name="Identifier: 4">Driver's License S99910651</identifiers>
+            <identifiers name="Identifier: 5">Passport Number X34975298X</identifiers>
+        </identifiers>
+        <marital_status>
+            <marital_status>M</marital_status>
+        </marital_status>
+        <multiple_birth/>
+        <name>
+            <family>Weissnat378</family>
+            <full_name>Mr. Abram53 Weissnat378</full_name>
+            <given>Abram53</given>
+            <given_list>['Abram53']</given_list>
+            <prefix>Mr.</prefix>
+            <prefix_list>['Mr.']</prefix_list>
+        </name>
+        <telecoms>
+            <number name="0">555-560-7469</number>
+            <system name="0">phone</system>
+            <use name="0">home</use>
+        </telecoms>
+        <uuid>d9eb4cf6-2894-4627-b912-bbdca07b0401</uuid>
+    </properties>
+</patient>
+
+
+```
 
 
 
